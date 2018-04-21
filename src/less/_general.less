@@ -8,7 +8,7 @@
     display: block;
     border: 1.5px solid @main-color;
     color: @main-color;
-    font-family: 'Gabriola', 'Marmelad', sans-serif;
+    font-family: 'Gabriola', @fonf;
     font-size: 30px;
     font-weight: normal;
     width: @w;
@@ -22,15 +22,20 @@
     float: left;
 }
 
-.h3(@m:12px 0px 8px 0px, @tal: left, @color: @main-color){
+.h3(@m:12px 0px 8px 0px, @fs:72px, @tal: left, @lih: 0.83em, @color: @main-color){
     padding: 0;
     margin: @m;
-    font-family: 'Gabriola', 'Marmelad', sans-serif;
-    font-size: 72px;
+    font-family: 'Gabriola', @fonf;
+    font-size: @fs;
     text-align: @tal;
     font-weight: normal;
-    line-height: 60px;
+    line-height: @lih;
     color: @color;
+}
+
+.h1(){
+    .h3(@m:300px 0px 40px 0px, @fs: 120px, @lih: 0.4em, @color: @text-color);
+    text-shadow: rgba(0,0,0,0.35) 0px 6px 10px;
 }
 
 .hr(){
