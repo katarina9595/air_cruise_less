@@ -1,14 +1,20 @@
 
 @path: '../img';
 @fonf: 'Marmelad', sans-serif;
+@fonf-wide: 'Gabriola', @fonf;
 @text-color: #342e2e;
 @main-color: #f76620;
+
+.logo(@m: 0){
+    float: left;
+    margin: @m;
+}
 
 .button-big(@m: 40px 0px 120px 5px, @w: 410px){
     display: block;
     border: 1.5px solid @main-color;
     color: @main-color;
-    font-family: 'Gabriola', @fonf;
+    font-family: @fonf-wide;
     font-size: 30px;
     font-weight: normal;
     width: @w;
@@ -25,7 +31,7 @@
 .h3(@m:12px 0px 8px 0px, @fs:72px, @tal: left, @lih: 0.83em, @color: @main-color){
     padding: 0;
     margin: @m;
-    font-family: 'Gabriola', @fonf;
+    font-family:  @fonf-wide;
     font-size: @fs;
     text-align: @tal;
     font-weight: normal;
@@ -46,13 +52,51 @@
     float: left;
 }
 
-.p(@m:40px 0px, @fs: 18px, @lh: 2em, @color: rgba(52,46,46,0.8), @lsp: 0.02em){
+.p(@m:40px 0px, @ff: @fonf, @fs: 18px, @lih: 2em, @color: rgba(52,46,46,0.8), @lsp: 0.02em){
     padding: 0;
     margin: @m;
+    font-family: @ff;
     font-size: @fs;
     text-align: left;
     font-weight: normal;
-    line-height: @lh;  
+    line-height: @lih;  
     color: @color;
     letter-spacing: @lsp;
+}
+
+.a(@color: @text-color, @ff: @fonf-wide, @fs: 24px, @lih: 1.25em, @lsp: 0em){
+    color: @color;
+    text-decoration: none;
+    font-family: @ff;
+    font-size: @fs;
+    font-weight: normal;
+    line-height: @lih;
+    letter-spacing: @lsp;
+    margin: 0;
+}
+
+.city(){
+    width: 270px;
+    height: 414px;
+    float: left;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-right: 150px; 
+    padding-top: 34px;  
+
+    &:nth-child(3){
+        margin-right: 0px;
+    }
+
+    &-img{
+        margin-bottom: 32px;
+    }
+
+    &-name{
+        .a(@ff: @fonf, @lsp: 0.02em, @lih: 1.5em);   
+
+        &:hover{
+            text-shadow: 1px 1px 3px @main-color;
+        }
+    }
 }

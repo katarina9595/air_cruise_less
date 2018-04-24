@@ -28,8 +28,7 @@ body {
             padding: 20px 0px 0px 0px;
 
             .logo{
-                float: left;
-                margin: 0;
+                .logo();            
             }
 
             .up{
@@ -48,21 +47,19 @@ body {
                     margin-right: 35px;
                     display: block;
 
-                    a{
-                        color: @text-color;
-                        text-decoration: none;
-                        font-family: 'Gabriola', @fonf;
-                        font-size: 24px;
+                    .menu-up-a{
+                        .a();
                     }
                 }
             }
         }
+
         h1{
             .h1();
         }
 
         p{
-            .p(@m:15px 0px 0px 5px,  @lh: 1.6em, @lsp: 0.01em);    
+            .p(@m:15px 0px 0px 5px,  @lih: 1.6em, @lsp: 0.01em);    
         }
 
         .button-big{
@@ -183,113 +180,80 @@ body {
 
         .cities1{
             padding: 84px 0px 76px 58px;
-        }
 
-        .city{
-            width: 270px;
-            height: 414px;
-            float: left;
-            background-color: rgba(255, 255, 255, 0.8);
-            text-align: center;
-            margin-right: 150px; 
-            padding-top: 34px;  
-        }
-
-        .city:nth-child(3){
-            margin-right: 0px;
-        }
-
-        .city-img{
-            margin-bottom: 32px;
-        }
-
-        .city-name{
-            font-family: @fonf;
-            text-decoration: none;
-            font-weight: normal;
-            font-size: 24px;
-            line-height: 1.5em;
-            color: @text-color;
-            letter-spacing: 0.02em;
-        }
-
-        .city-name:hover{
-            text-shadow: 1px 1px 3px @main-color;
+            .city{
+                .city();
+            }
         }
 
         .cities2{
             padding: 0px 0px 0px 58px;
             margin-bottom: 218px;
+
+            .city{
+                .city();
+            }
         }
     }
+
     footer{
         padding: 38px 0px 14px 0px;
         background-color: @text-color;
-    }
 
-    .join{
-        float: left;
-        margin: 0px 190px 0px 30px;
-        text-align: left;
-    }
+        .join{
+            float: left;
+            margin: 0px 190px 0px 30px;
+            text-align: left;
 
+            p{
+                .p(@m: 0px 0px 15px 0px, @ff: @fonf-wide, @fs: 30px, @lih: 1.6em, @color: rgba(241, 148, 109, 0.9));
+            }
+            
+            .social-block2{
+                margin-left: 15px;
 
-    footer p{
-        font-family: 'Gabriola', @fonf;
-        font-weight: normal;
-        font-size: 30px;
-        line-height: 1.6em;
-        color: rgba(241, 148, 109, 0.9);
-        margin: 0px 0px 15px 0px;
-    }
+                .social2{
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    float: left;
+                    margin-right: 20px;
+                    opacity: 0.9;
+                }
+            }
+        }
 
-    .social-block2{
-        margin-left: 15px;
-    }
+        .down{
+            float: left;
+            margin: 0px 0px 40px 0px;
+    
+            .menu2{
+                column-count: 2;
+                column-gap: 90px;
+                padding: 0px;
+                margin: 0;
+                display: block;
+        
+                .menu-down-a{
+                    .a(@color: rgba(241, 148, 109, 0.9), @fs: 30px, @lih: 1.6em);
+                }
+            }
+        }
 
-    .social2{
-        width: 20px;
-        height: 20px;
-        display: block;
-        float: left;
-        margin-right: 20px;
-        opacity: 0.9;
-    }
+        .logo-footer{
+            clear: both;
+            float: right;
+            margin-right: 38px;
 
-    .down{
-        float: left;
-        margin: 0px 0px 40px 0px;
-    }
+            .logo{
+                .logo(@m: 0px 10px 0px 0px);
+                opacity: 0.9;
+            }
 
-    .menu2{
-        column-count: 2;
-        column-gap: 90px;
-        padding: 0px;
-        margin: 0;
-        display: block;
-    }
-
-    .menu2 li a{
-        color: rgba(241, 148, 109, 0.9);
-        text-decoration: none;
-        font-weight: normal;
-        font-family: 'Gabriola', @fonf;
-        font-size: 30px;
-        line-height: 1.6em;
-        margin: 0;
-    }
-
-
-    .logo-footer{
-        clear: both;
-        opacity: 0.9;
-        float: right;
-        margin-right: 38px;
-    }
-
-    .logo-footer p{
-        float: left;
-        margin:  40px 0px 0px 10px;
-        line-height: 0.5em;
+            p{
+                .p(@m: 22px 0px 0px 0px, @ff: @fonf-wide, @fs: 30px, @lih: 0.5em, @color: rgba(241, 148, 109, 0.9));
+                float: left;  
+            }
+        }
     }
 }
