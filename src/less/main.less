@@ -20,9 +20,7 @@ body {
     }
 
     .banner {
-        padding-bottom: 10px;
-        background: url('@{path}/fon1.jpg') no-repeat center top;
-        background-size: cover;
+        .section-set(@pad: 0px 0px 10px 0px);
 
         header{
             padding: 20px 0px 0px 0px;
@@ -83,9 +81,7 @@ body {
         }
     }
     .services {
-        padding: 77px 0px 80px 0px;
-        background: url('@{path}/fon2.jpg') no-repeat center top;
-        background-size: cover;
+        .section-set(@pad:77px 0px 80px 0px, @img: 'fon2');
 
         .flight {
             padding: 0px 35px 64px 10px;
@@ -138,9 +134,7 @@ body {
     }
 
     .about {
-        padding: 78px 0px 120px 0px ;
-        background: url('@{path}/about.jpg') no-repeat center top;
-        background-size: cover;
+        .section-set(@pad:78px 0px 120px 0px, @img: 'about');       
        
         .about-us{
             margin-left: 10px;
@@ -170,9 +164,7 @@ body {
     }
 
     .locations {
-        padding: 160px 0px 792px 0px ;
-        background: url('@{path}/fon3.jpg') no-repeat center top;
-        background-size: cover;
+        .section-set(@pad:160px 0px 792px 0px, @img: 'fon3');
 
         h3{
             .h3(@m: 0, @tal: center, @color: #f75b10);
